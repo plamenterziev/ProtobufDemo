@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message Card {
+	
+	enum Suit {
+		CLUBS = 0;
+		HEARTS = 1;
+		SPADES = 2;
+		DIAMONDS = 3;
+	}
+
+	enum Rank {
+		NINE = 0;
+		TEN = 1;
+		JACK = 2;
+		QUEEN = 3;
+	}
+
+	Suit s = 1;
+	Rank rank = 2;
+	int32 points = 3;
+
+
+}
+
+message Deck {
+	
+	repeated Card cards = 1;
+}
